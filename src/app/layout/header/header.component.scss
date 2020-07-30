@@ -1,0 +1,13 @@
+@import "../../../styles/colors";
+
+.main-header {
+  height: 60px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  background: $cararra;
+
+  &__hamburger {
+    margin-left: auto;
+  }
+}
