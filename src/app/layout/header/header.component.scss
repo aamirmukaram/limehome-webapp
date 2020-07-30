@@ -1,7 +1,9 @@
 @import "../../../styles/colors";
 
+$headerHeight: 60px;
+
 .main-header {
-  height: 60px;
+  height: $headerHeight;
   padding: 16px;
   display: flex;
   align-items: center;

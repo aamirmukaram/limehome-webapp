@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input} from '@angular/core';
 import {Home} from '../home';
 import {BehaviorSubject, timer} from 'rxjs';
 
@@ -7,8 +7,11 @@ import {BehaviorSubject, timer} from 'rxjs';
   templateUrl: './home-card.component.html',
   styleUrls: ['./home-card.component.scss']
 })
-export class HomeCardComponent implements OnInit {
+export class HomeCardComponent {
   ele: Element = this.eleRef.nativeElement;
+  /**
+   * Subject to add class on card container
+   */
   private activeClassSubject$ = new BehaviorSubject<string>('');
   activeClass$ = this.activeClassSubject$.asObservable();
 
@@ -18,9 +21,9 @@ export class HomeCardComponent implements OnInit {
   constructor(private eleRef: ElementRef) {
   }
 
-  ngOnInit(): void {
-  }
-
+  /**
+   * Scroll the current card into view
+   */
   scrollIntoView(): void {
     this.ele.scrollIntoView({
       behavior: 'smooth'
