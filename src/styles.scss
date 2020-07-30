@@ -1,8 +1,13 @@
-//@import "styles/reset";
+@import "styles/reset";
+@import "styles/fonts";
 
 html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
 }

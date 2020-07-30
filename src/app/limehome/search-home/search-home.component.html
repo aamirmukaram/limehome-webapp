@@ -1,1 +1,15 @@
-<p>search-home works!</p>
+<div class="search-home">
+  <div class="search-home__map">
+    <app-here-map
+      [apikey]="hereMapApiKey"
+      [height]="hostElement.clientHeight + 'px'"
+      [width]="hostElement.clientWidth + 'px'"
+    >
+    </app-here-map>
+  </div>
+  <div class="search-home__content">
+    <app-home-card></app-home-card>
+    <app-home-card></app-home-card>
+    <app-home-card></app-home-card>
+  </div>
+</div>

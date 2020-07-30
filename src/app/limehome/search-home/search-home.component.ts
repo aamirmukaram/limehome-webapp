@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
+import {environment} from '../../../environments/environment';
+
 
 @Component({
   selector: 'app-search-home',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-home.component.scss']
 })
 export class SearchHomeComponent implements OnInit {
+  public hereMapApiKey = environment.hereMaps.apiKey;
+  public hostElement: Element = this.element.nativeElement;
 
-  constructor() { }
+  constructor(private element: ElementRef) {
+  }
 
   ngOnInit(): void {
   }

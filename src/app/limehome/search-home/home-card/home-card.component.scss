@@ -1,0 +1,74 @@
+@import "src/styles/colors";
+
+.home-card {
+  border: 1px solid;
+  height: 100%;
+  padding: 18px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex: 1;
+    display: flex;
+    margin-bottom: 15px;
+
+    &__img {
+      flex: 1;
+      min-width: 100px;
+
+      > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__desc {
+      flex: 2;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.card-description {
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+
+    &__price {
+      font-weight: bold;
+    }
+
+    &__meta {
+      font-size: 11px;
+      color: $raven;
+    }
+  }
+
+  &__place-name {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  &__location {
+    font-weight: bold;
+    font-size: 11px;
+    color: $raven;
+  }
+}
+
+.btn {
+  background: $treePoppy;
+  height: 40px;
+  color: white;
+
+  &--full {
+    width: 100%;
+  }
+}

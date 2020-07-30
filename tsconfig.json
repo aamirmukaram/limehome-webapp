@@ -16,5 +16,16 @@
     {
       "path": "./e2e/tsconfig.json"
     }
-]
+  ],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@environments/*": [
+        "environments/*"
+      ]
+    }
+  }
 }
