@@ -1,1 +1,8 @@
-@import "styles/reset";
+//@import "styles/reset";
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
