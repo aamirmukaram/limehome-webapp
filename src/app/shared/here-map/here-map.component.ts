@@ -3,8 +3,6 @@ import {Subject} from 'rxjs';
 import {debounceTime} from 'rxjs/operators';
 import {GeoLocation} from '../../limehome/search-home/home';
 
-declare var H: any;
-
 @Component({
   selector: 'app-here-map',
   templateUrl: './here-map.component.html',

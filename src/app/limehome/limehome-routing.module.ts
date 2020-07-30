@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {SearchHomeComponent} from './search-home/search-home.component';
 import {LimehomeComponent} from './limehome.component';
 
 
