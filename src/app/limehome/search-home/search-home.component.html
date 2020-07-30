@@ -4,12 +4,12 @@
       [apikey]="hereMapApiKey"
       [height]="hostElement.clientHeight + 'px'"
       [width]="hostElement.clientWidth + 'px'"
+      [markers]="geoLocations"
+      (markerSelected)="markerSelected($event)"
     >
     </app-here-map>
   </div>
-<!--  <div class="search-home__content">-->
-<!--    <app-home-card></app-home-card>-->
-<!--    <app-home-card></app-home-card>-->
-<!--    <app-home-card></app-home-card>-->
-<!--  </div>-->
+  <div class="search-home__content">
+    <app-home-card *ngFor="let home of homes;" [home]="home"></app-home-card>
+  </div>
 </div>

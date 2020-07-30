@@ -1,13 +1,13 @@
 <div class="home-card">
   <div class="home-card__content">
     <div class="home-card__content__img">
-      <img src="https://limehome.imgix.net/properties/121/82d6c04b-3b03-4e56-8f25-3ae79bbee765.jpg" alt="">
+      <img [src]='home.imageUrl' alt="">
     </div>
     <div class="home-card__content__desc card-description">
-      <div class="card-description__place-name">Berlin Tauentzienstrasse</div>
-      <div class="card-description__location">2.4 KM from the city center</div>
+      <div class="card-description__place-name">{{home.name}}</div>
+      <div class="card-description__location">{{home.location}}</div>
       <div class="card-description__footer">
-        <div class="card-description__footer__price">{{98 | currency:'GBP'}}</div>
+        <div class="card-description__footer__price">{{home.price | currency:home.currency}}</div>
         <div class="card-description__footer__meta">Designs may vary</div>
       </div>
     </div>

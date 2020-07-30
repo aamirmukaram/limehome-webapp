@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
+import {Home} from '../home';
 
 @Component({
   selector: 'app-home-card',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-card.component.scss']
 })
 export class HomeCardComponent implements OnInit {
+  ele: Element = this.eleRef.nativeElement;
 
-  constructor() { }
+  @Input()
+  home: Home;
+
+  constructor(private eleRef: ElementRef) {
+  }
 
   ngOnInit(): void {
+  }
+
+  scrollIntoView(): void {
+    this.ele.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 
 }
