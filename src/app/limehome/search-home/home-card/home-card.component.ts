@@ -1,5 +1,6 @@
 import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {Home} from '../home';
+import {BehaviorSubject, timer} from 'rxjs';
 
 @Component({
   selector: 'app-home-card',
@@ -8,6 +9,8 @@ import {Home} from '../home';
 })
 export class HomeCardComponent implements OnInit {
   ele: Element = this.eleRef.nativeElement;
+  private activeClassSubject$ = new BehaviorSubject<string>('');
+  activeClass$ = this.activeClassSubject$.asObservable();
 
   @Input()
   home: Home;
@@ -21,6 +24,10 @@ export class HomeCardComponent implements OnInit {
   scrollIntoView(): void {
     this.ele.scrollIntoView({
       behavior: 'smooth'
+    });
+    this.activeClassSubject$.next('home-card--active');
+    timer(3000).subscribe(() => {
+      this.activeClassSubject$.next('');
     });
   }
 

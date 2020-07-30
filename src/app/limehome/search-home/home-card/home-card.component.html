@@ -1,4 +1,4 @@
-<div class="home-card">
+<div class="home-card" [ngClass]="activeClass$ | async">
   <div class="home-card__content">
     <div class="home-card__content__img">
       <img [src]='home.imageUrl' alt="">
